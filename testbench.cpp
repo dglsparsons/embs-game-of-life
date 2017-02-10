@@ -11,11 +11,11 @@ int main() {
 
     //This is the input board, represented as 100 bits (10 x 10 board)
     uint32 input_state1 = 0b0000;
-	uint32 input_state2 = 0b00000000000000000000000000000000;
-	uint32 input_state3 = 0b00000000000001000000000100000000;
-	uint32 input_state4 = 0b01000000000000000000000000000000;
+    uint32 input_state2 = 0b00000000000000000000000000000000;
+    uint32 input_state3 = 0b00000000000001000000000100000000;
+    uint32 input_state4 = 0b01000000000000000000000000000000;
 
-	// Send the input board to the hardware
+    // Send the input board to the hardware
     to_hw.write(input_state1);
     to_hw.write(input_state2);
     to_hw.write(input_state3);
@@ -53,10 +53,10 @@ void print_bits(unsigned value, unsigned bits) {
     {
         printf("%d", (mask & value) != 0);
         if (new_line == 9) {
-        	printf("\n");
-        	new_line = 0;
+            printf("\n");
+            new_line = 0;
         } else {
-        	new_line++;
+            new_line++;
         }
         mask >>= 1;
     }
